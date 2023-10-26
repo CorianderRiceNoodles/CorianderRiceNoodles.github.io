@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y&S</title>
+    <style>
+        h1{
+            color:rgb(248, 136, 155);
+            text-align: center;
+            background-color:#f0f0f0;
+        }
+        body {
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .sakura {
+            position: absolute;
+            top: -10px;
+            z-index: 1;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+        0% {
+            transform: translateY(-10%);
+        }
+        100% {
+            transform: translateY(110vh);
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1>这是咱们俩的秘密小窝</h1>
+    <script>
+        function createSakura() {
+          const sakura = document.createElement('div');
+          sakura.className = 'sakura';
+    
+          const left = Math.random() * window.innerWidth;
+          const animationDuration = Math.random() * 6 + 3;
+    
+          sakura.style.left = `${left}px`;
+          sakura.style.animationDuration = `${animationDuration}s`;
+    
+          sakura.innerHTML = '&#x1F338;';
+    
+          document.body.appendChild(sakura);
+    
+          sakura.addEventListener('animationend', () => {
+            sakura.parentNode.removeChild(sakura);
+          });
+        }
+    
+        setInterval(createSakura, 500);
+      </script>
+</body>
+</html>
