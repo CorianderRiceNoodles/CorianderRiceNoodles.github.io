@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,11 +31,32 @@
             transform: translateY(110vh);
         }
         }
+        a:link {
+            color: rgb(248, 136, 155); /* 设置链接的默认颜色 */
+            text-decoration: none; /* 去除下划线 */
+        }
+        a:hover {
+            color: rgb(248, 136, 155); /* 鼠标悬停时链接的颜色 */
+            text-decoration: none; /* 加下划线 */
+        }  
+        div {
+            width: 300;
+            height: 300;
+            vertical-align: middle;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <h1>这是咱们俩的秘密小窝</h1>
+    <div>
+        <h3><a href="">♥ 看看我们的照片~</a></h3><br><br>
+        <h3><a href="">♥ 听听拉屎大王唱歌</a></h3><br><br>
+        <h3><a href="">♥ e人爱拍视频</a></h3><br><br>
+        <h3><a href="https://tieba.baidu.com/p/8442531296?pid=147756949858&cid=0#147756949858">♥ 看会帖子，回忆一下我们的爱</a></h3><br><br>
+    </div>
     <script>
+        alert('漫天的樱花雨是我爱你的证明！！');
         function createSakura() {
           const sakura = document.createElement('div');
           sakura.className = 'sakura';
@@ -56,6 +77,7 @@
         }
     
         setInterval(createSakura, 500);
-      </script>
+
+    </script>
 </body>
 </html>
